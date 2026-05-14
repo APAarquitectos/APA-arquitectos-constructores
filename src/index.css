@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-base-950: #0a0a0a;
+  --color-gallery: #f5f5f7;
+  --color-technical: #8e8e93;
+  --color-petroleum: #0D3443;
+  --color-accent-orange: #F59132;
+  --color-neutral-gray: #6b7280;
+}
+
+@layer base {
+  body {
+    @apply bg-base-950 text-gallery antialiased selection:bg-white/20;
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+  }
+}
+
+.perspective-text {
+  perspective: 1000px;
+}
+
+.glass-morphism {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-base-950;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
